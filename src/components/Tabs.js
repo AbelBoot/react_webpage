@@ -1,5 +1,6 @@
 import React from "react"
 import { Tab } from "./Tab"
+import { ListTab, LiActive, OlTabs } from "./SmallComp"
 
 export default class Tabs extends React.Component {
 	
@@ -17,8 +18,7 @@ export default class Tabs extends React.Component {
 
 		return (
 			<>
-			<div>
-			<ol>
+			<OlTabs>
 				{children.map((tab) => {
 					return (
 						<Tab
@@ -29,7 +29,7 @@ export default class Tabs extends React.Component {
 						></Tab>
 						)
 				})}
-			</ol>
+			</OlTabs>
 			<div>
 				{children.map((content) => {
 					if (content.props.label === activeTab){
@@ -38,8 +38,6 @@ export default class Tabs extends React.Component {
 						)
 					}
 				})}
-
-			</div>
 			</div>
 			</>
 			)

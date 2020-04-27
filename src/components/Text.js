@@ -4,3 +4,12 @@ export const AboutMeText = [
 	"Sobre mi",
 	"A meu respeito"
 	]
+
+export const ProjectText = [
+	"Projects",
+	"Projets",
+	"Proyectos",
+	"Projeitos"
+	]
+
+	

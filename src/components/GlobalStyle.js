@@ -4,7 +4,8 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
 	h3 {
 	font-family: 'Just Another Hand';
-	background: palevioletred;
+	color: white;
+	background: #7D203F;
 	}
 `
 

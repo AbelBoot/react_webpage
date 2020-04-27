@@ -1,4 +1,5 @@
 import React from "react"
+import { ListTab, LiActive, OlTabs } from "./SmallComp"
 
 export class Tab extends React.Component {
 	
@@ -10,9 +11,9 @@ export class Tab extends React.Component {
 	render(){
 		const {label} = this.props
 		return (
-			<li
+			<ListTab
 				onClick={this.onClick}
-				>{label}</li>
+				>{label}</ListTab>
 			)
 	}
 }

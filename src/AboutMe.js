@@ -1,11 +1,17 @@
 import React from "react"
-import { LocaleContext } from "./LocaleContext"
+import { LocaleContext } from "./components/LocaleContext"
 import styled from "styled-components"
-import { AboutMeText } from "./Text"
+import { AboutMeText } from "./components/Text"
+import Header from "./components/Header"
+import { Form } from "./components/Form"
+import pdf from "./documents/Resume.pdf"
+
 
 export default class AboutMe extends React.Component {
 	render(){
 		return (
+			<>  
+    		<Header />
 			<LocaleContext.Consumer>
 			{localeVal => {
 					if (localeVal.locale === "en"){
@@ -20,12 +26,12 @@ export default class AboutMe extends React.Component {
 					if (localeVal.locale === "pt"){
 						return <h3>{AboutMeText[3]}</h3>
 					}
-
-			 }
-		}
+			 	}
+			}
 			</LocaleContext.Consumer>
+			<Form />
+			<a href={pdf}>Traditional CV</a>
+			</>   
 			)
+		}
 	}
-}
-//export default Button
-//<ToggleLocale />

@@ -1,5 +1,4 @@
 import React from "react"
-//import ToggleLocale from "./components/ToggleLocale"
 
 export const LocaleContext = React.createContext()
 //const LocaleProvider = LocaleContext.Provider
@@ -8,7 +7,7 @@ export const LocaleContext = React.createContext()
 export default class LocaleProvider extends React.Component {
 	
 	updateLocale = (lang) => {
-        this.setState({locale: lang})//.currentTarget.dataset.lang})
+        this.setState({locale: lang})
     }
 
 	state = {
@@ -20,13 +19,8 @@ export default class LocaleProvider extends React.Component {
 		return (
 			<LocaleContext.Provider
 				value={this.state}
-				// value={{
-				// 	locale: this.state.locale,
-				//onClick={updateLocale: this.updateLocale}
 			>
-
 			{this.props.children}
-			
 			</LocaleContext.Provider>
 			)
 	}
