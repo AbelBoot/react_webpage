@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const Relative = styled.div`
   position: relative;
   padding: .5em;
+
 `
 
 export const Flex = styled.div`
