@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
-import { pink } from "./variables"
+import styled  from "styled-components"
+import { pink, grey } from "./variables"
 
 
 export const BigDiv = styled.button`
@@ -73,12 +73,19 @@ export const LiActive = styled.li`
     height: 60%;
     background-color: ${pink};
   }
-
-
-
-
-
  `
+
+
+
+ export const Index = styled.div`
+  position: absolute;
+  left: 0;
+  h1 {
+    font-size: 3em;
+    color: ${grey};
+    opacity: 0.4;
+  }
+`
 
 
 
