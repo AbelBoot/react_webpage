@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { LocaleContext } from "./LocaleContext"
-import { Div, BigDiv, Span } from "./SmallComp"
+import { Div, BigDiv, Span } from "../theme/SmallComp"
 
 export default class Header extends React.Component {
 	render(){

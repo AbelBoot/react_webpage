@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { AboutMeText } from "./components/Text"
 import Header from "./components/Header"
 import { Form } from "./components/Form"
+import { A } from "./theme/SmallComp"
 import pdf from "./documents/Resume.pdf"
 
 
@@ -30,7 +31,7 @@ export default class AboutMe extends React.Component {
 			}
 			</LocaleContext.Consumer>
 			<Form />
-			<a href={pdf}>Traditional CV</a>
+			<A href={pdf}>Traditional CV</A>
 			</>   
 			)
 		}

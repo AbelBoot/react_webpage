@@ -1,6 +1,6 @@
 import React from "react"
 import { Tab } from "./Tab"
-import { ListTab, LiActive, OlTabs } from "./SmallComp"
+import { ListTab, LiActive, OlTabs } from "../theme/SmallComp"
 
 export default class Tabs extends React.Component {
 	

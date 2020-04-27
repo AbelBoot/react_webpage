@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { pink } from "./variables"
 
 
 export const BigDiv = styled.button`
@@ -48,4 +49,50 @@ export const LiActive = styled.li`
   color: palevioletred;
   margin: 0 1em;
   padding: 0.25em 1em;
+  
  `
+
+ export const A = styled.a`
+  color: black;
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    background-color: ${pink};
+    z-index: -1;
+    transition: height .2s, background-color .2s;
+  }
+
+  &:hover:after {
+    height: 60%;
+    background-color: ${pink};
+  }
+
+
+
+
+
+ `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

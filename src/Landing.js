@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Landing.css"
-import { Button } from "./components/SmallComp"
+import { Button } from "./theme/SmallComp"
 import Header from "./components/Header"
 import Tabs from "./components/Tabs"
 

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { ProjectText } from "./components/Text"
 import Header from "./components/Header"
 import Tabs from "./components/Tabs"
+import Part1 from "./components/droneProject/Part1"
 
 
 export default class Projects extends React.Component {
@@ -30,7 +31,10 @@ export default class Projects extends React.Component {
 			
 			</LocaleContext.Consumer>
 			<Tabs>
-      			<div label="allig">See you later Alligator</div>
+      			<div label="allig">
+      				See you later Alligator
+					<Part1 />
+      			</div>
       			<div label="croco">After a while crocodile</div>
       			<div label="nothing">There is nothing here</div>
     		</Tabs>

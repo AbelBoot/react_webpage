@@ -6,7 +6,7 @@ import './index.css';
 import Landing from './Landing';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import { GlobalStyle } from "./components/GlobalStyle"
+import { GlobalStyle } from "./theme/GlobalStyle"
 
 ReactDOM.render(
   <React.StrictMode>
