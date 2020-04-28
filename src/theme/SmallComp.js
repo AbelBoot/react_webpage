@@ -3,7 +3,7 @@ import styled  from "styled-components"
 import { pink, grey } from "./variables"
 
 
-export const BigDiv = styled.button`
+export const BigDiv = styled.div`
 	display:flex;
  	justify-content: flex-end; 
   	width: 100%;
@@ -12,13 +12,13 @@ export const BigDiv = styled.button`
   	border: .5px solid black;
  `
 
- export const Div = styled.button`
+ export const Div = styled.div`
 	background: transparent;
   	border-radius: 3px;
   	border: .5px solid black;
  `
 
- export const Span = styled.button`
+ export const Span = styled.span`
 	background: transparent;
   	border-radius: 3px;
   	border: .5px solid green;
