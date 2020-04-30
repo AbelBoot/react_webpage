@@ -1,6 +1,9 @@
 import React from "react"
 import { Tab } from "./Tab"
 import { ListTab, LiActive, OlTabs } from "../theme/SmallComp"
+import { Container, Relative, Flex  } from "../theme/Containers"
+import styled  from "styled-components"
+import { css }  from "styled-components"
 
 export default class Tabs extends React.Component {
 	
@@ -18,7 +21,10 @@ export default class Tabs extends React.Component {
 
 		return (
 			<>
-			<OlTabs>
+			<Container>
+			<OlTabs 				
+				justify={"space-between"}
+				align={"stretch"}>
 				{children.map((tab) => {
 					return (
 						<Tab
@@ -34,11 +40,12 @@ export default class Tabs extends React.Component {
 				{children.map((content) => {
 					if (content.props.label === activeTab){
 						return (
-							<h3>{content}</h3>
+							<h4>{content}</h4>
 						)
 					}
 				})}
 			</div>
+			</Container>
 			</>
 			)
 	}

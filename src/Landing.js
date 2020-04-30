@@ -2,14 +2,14 @@ import React from 'react'
 import "./Landing.css"
 import { Button } from "./theme/SmallComp"
 import { violet } from "./theme/variables"
-import Header from "./components/Header"
+import { Header } from "./components/Header"
 import Tabs from "./components/Tabs"
 import { Icon } from "./components/Icons"
 
 function Landing() {
   return (
     <>
-    <Header />
+    
     <h3>This is the portfolio..</h3>
     <Icon name="backward2" width="25px" color={violet}/>
     <Icon name="facebook2" color={"yellow"}/>
@@ -33,6 +33,7 @@ function Landing() {
     <Icon name="css" color="blue"/>
     <Icon name="github" color="blue"/>
     <Icon name="rails" color="blue"/>
+    <Icon name="googleScholars" color="blue"/>
     <Button>Button</Button>
     </>
   );

@@ -1,11 +1,12 @@
 import React from "react"
 import { LocaleContext } from "./LocaleContext"
 import styled from "styled-components"
-import { AboutMeText } from "./Text"
+import { AboutMeText, AboutMeText1 } from "./Text"
 
 export default class AboutMe extends React.Component {
 	render(){
 		return (
+			<>
 			<LocaleContext.Consumer>
 			{localeVal => {
 					if (localeVal.locale === "en"){
@@ -20,10 +21,11 @@ export default class AboutMe extends React.Component {
 					if (localeVal.locale === "pt"){
 						return <h3>{AboutMeText[3]}</h3>
 					}
-
-			 }
-		}
+			 	}
+			}
 			</LocaleContext.Consumer>
+			<h3>{AboutMeText1}</h3>
+			</>
 			)
 	}
 }

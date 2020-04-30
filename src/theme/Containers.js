@@ -1,4 +1,3 @@
-import React from "react"
 import styled  from "styled-components"
 import { css }  from "styled-components"
 
@@ -17,14 +16,15 @@ export const Relative = styled.div`
 
 export const Flex = styled.div`
   display: flex;
+  width: 100%;
   ${({justify}) => justify && css`
     justify-content: ${justify};
-  `}
+  `};
   ${({column}) => column && css`
     flex-direction: ${column};
-  `}
-  ${({align}) => align && css`
-    align-content: ${align};
+  `};
+  ${({alignItems}) => alignItems && css`
+    align-items: ${alignItems};
   `};
 
 `

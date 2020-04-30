@@ -1,5 +1,5 @@
 import React from "react"
-import { ListTab, LiActive, OlTabs } from "../theme/SmallComp"
+import { ListTab } from "../theme/SmallComp"
 
 export class Tab extends React.Component {
 	
@@ -9,11 +9,15 @@ export class Tab extends React.Component {
 	}
 
 	render(){
-		const {label} = this.props
+		const {label, activeTab} = this.props
+
 		return (
-			<ListTab
+			<ListTab 
 				onClick={this.onClick}
-				>{label}</ListTab>
+				selected={activeTab === label}
+			>
+				{label}
+			</ListTab>
 			)
 	}
 }

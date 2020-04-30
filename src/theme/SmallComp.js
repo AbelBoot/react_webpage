@@ -1,6 +1,6 @@
-import React from "react"
 import styled  from "styled-components"
-import { pink, grey } from "./variables"
+import { css }  from "styled-components"
+import { pink, grey, violet } from "./variables"
 
 
 export const BigDiv = styled.div`
@@ -25,15 +25,31 @@ export const BigDiv = styled.div`
  `
 
 export const OlTabs = styled.ol`
-	  display: inline-block;
+	  
+      display: flex;
+  width: 100%;
+  ${({justify}) => justify && css`
+    justify-content: ${justify};
+  `};
+  ${({column}) => column && css`
+    flex-direction: ${column};
+  `};
+  ${({alignItems}) => alignItems && css`
+    align-items: ${alignItems};
+  `};
   list-style: none;
   margin-bottom: -1px;
   padding: 0.5rem 0.75rem;
 `
 
 export const ListTab = styled.li`
-  border-bottom: 1px solid #ccc;
+  border-bottom: ${props => 
+    props.selected 
+      ? `5px solid ${violet}`
+      : "1px solid #ccc"};
   padding-left: 0;
+  display: block;
+  flex: 0 1 auto;
 `
 
 export const LiActive = styled.li`
