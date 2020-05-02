@@ -80,7 +80,6 @@ export const Icon = ({name, color = violet, width = 36, height = 36}) => {
 		? Polygon[name] 
 				? Polygon[name][0].map((el, ind, arr) => {
 					const pts = arr[0]
-					console.log("Polygon[name][1]", Polygon[name][1])
 					const filling = arr[1]			
 					return <polygon 
 						points={arr[0]}	

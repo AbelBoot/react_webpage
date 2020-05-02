@@ -1,33 +1,34 @@
 import styled  from "styled-components"
 import { css }  from "styled-components"
+import { Link } from "react-router-dom"
 import { pink, grey, violet } from "./variables"
 
 
 export const BigDiv = styled.div`
 	display:flex;
  	justify-content: flex-end; 
-  	width: 100%;
-  	background: transparent;
-  	border-radius: 3px;
-  	border: .5px solid black;
- `
-
- export const Div = styled.div`
-	background: transparent;
-  	border-radius: 3px;
-  	border: .5px solid black;
- `
-
- export const Span = styled.span`
-	background: transparent;
-  	border-radius: 3px;
-  	border: .5px solid green;
- `
-
-export const OlTabs = styled.ol`
-	  
-      display: flex;
   width: 100%;
+  background: transparent;
+  ${({justify}) => justify && css`
+    justify-content: ${justify};
+  `};
+ `
+
+export const Div = styled.div`
+  background: transparent;
+  margin: 10px
+`
+
+export const Span = styled.span`
+  display: inline;
+  background-color: ${pink};
+  border-radius: 5px 20px 5px;
+  padding: 6px 10px 6px 10px;
+`
+
+export const OlTabs = styled.ol`  
+  display: flex;
+  
   ${({justify}) => justify && css`
     justify-content: ${justify};
   `};
@@ -43,19 +44,41 @@ export const OlTabs = styled.ol`
 `
 
 export const ListTab = styled.li`
-  border-bottom: ${props => 
-    props.selected 
-      ? `5px solid ${violet}`
-      : "1px solid #ccc"};
-  padding-left: 0;
-  display: block;
-  flex: 0 1 auto;
+  ${({justify}) => justify && css`
+    justify-content: ${justify};
+  `};
+  ${({column}) => column && css`
+    flex-direction: ${column};
+  `};
+  ${({alignItems}) => alignItems && css`
+    align-items: ${alignItems};
+  `};
+  
+  background-color: ${props => 
+    props.selected
+      ? violet
+      : pink};
+  border-radius: 5px 20px 5px;
+  color: ${props => 
+    props.selected
+      ? "white"
+      : grey};
+  font-weight: bold;
+  padding: 6px 10px 6px 10px;
+  margin: .8em;
+  
+  
+  &:hover {
+    cursor: pointer;
+  }
 `
+// flex: 0 1 auto; display: block;
 
 export const LiActive = styled.li`
   background-color: white;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
+
 `
 
  export const Button = styled.button`
@@ -68,11 +91,23 @@ export const LiActive = styled.li`
   
  `
 
+export const HeaderLink = styled(Link)`
+  color: ${violet};
+  &:hover {
+    color: black;
+  }  
+`
+
+export const HeaderDiv = styled.div`
+  box-shadow: 0px 4px 15px 0px ${pink};
+
+`
+
  export const A = styled.a`
   color: black;
   text-decoration: none;
   position: relative;
-
+  padding: 6px 10px 6px 10px;
   &:after {
     content: " ";
     position: absolute;
@@ -87,11 +122,10 @@ export const LiActive = styled.li`
 
   &:hover:after {
     height: 60%;
+    border-radius: 1px;
     background-color: ${pink};
   }
  `
-
-
 
  export const Index = styled.div`
   position: absolute;
@@ -102,6 +136,12 @@ export const LiActive = styled.li`
     opacity: 0.4;
   }
 `
+
+// from OlTabs
+//   border-bottom: ${props => 
+//     props.selected 
+//       ? `5px solid ${grey}`
+//       : "1px solid #ccc"};
 
 
 

@@ -13,6 +13,7 @@ export class Tab extends React.Component {
 
 		return (
 			<ListTab 
+				alignItems={"flex-start"}
 				onClick={this.onClick}
 				selected={activeTab === label}
 			>

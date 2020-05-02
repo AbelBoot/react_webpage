@@ -1,21 +1,23 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import { LocaleContext } from "../context/LocaleContext"
-import { Div, BigDiv, Span } from "../theme/SmallComp"
+import { Div, BigDiv, Span, HeaderLink, HeaderDiv } from "../theme/SmallComp"
 
 export const Header = () => {
 	const { locale, updateLocale } = useContext(LocaleContext)
 		return (
 			 <>
+			 <HeaderDiv>
 			<BigDiv>
-			<Link to="/"><Span>Home</Span></Link>
-			<Link to="/projects"><Span>Projects</Span></Link>
-			<Link to="/about"><Span>About Me</Span></Link>
+			<HeaderLink to="/" style={{textDecoration: "none", marginTop: "4px"}}><Div> Home </Div></HeaderLink>
+			<HeaderLink to="/projects" style={{textDecoration: "none", marginTop: "4px"}}><Div> Projects </Div></HeaderLink>
+			<HeaderLink to="/about" style={{textDecoration: "none", marginTop: "4px"}}><Div> About Me </Div></HeaderLink>
 			<Div onClick={updateLocale.bind(null, "fr")}>🇫🇷</Div>
 			<Div onClick={updateLocale.bind(null, "en")}>🇬🇧</Div>
 			<Div onClick={updateLocale.bind(null, "sp")}>🇪🇸</Div>
 			<Div onClick={updateLocale.bind(null, "pt")}>🇵🇹</Div>
 			</BigDiv>
+			</HeaderDiv>
 			</>
 			)
 }

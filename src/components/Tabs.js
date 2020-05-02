@@ -23,8 +23,9 @@ export default class Tabs extends React.Component {
 			<>
 			<Container>
 			<OlTabs 				
-				justify={"space-between"}
-				align={"stretch"}>
+				justify={"flex-end"}
+				alignItems={"flex-end"}
+				column={"column"}>
 				{children.map((tab) => {
 					return (
 						<Tab
