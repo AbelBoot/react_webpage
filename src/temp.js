@@ -1,5 +1,5 @@
     <Icon name="backward2" width="25px" color={violet}/>
-    <Icon name="facebook2" color={"yellow"}/>
+    
     <Icon name="forward3" />
       <Icon name="minus" />
     <Icon name="pause2" />

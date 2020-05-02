@@ -6,7 +6,23 @@ export const Container = styled.div`
   padding-right: 30px;
   padding-top: 30px;
   
+   
 `
+//display: flex;
+
+export const ProjectContainer = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 100%;
+`
+
+export const ProjectChemistryContainer = styled.div`
+  width: 350px;
+  background-color: blue;
+  
+`
+
 
 export const Relative = styled.div`
   position: relative;

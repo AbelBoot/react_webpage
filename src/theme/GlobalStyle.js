@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const BackgroundImageDrone = styled.div`
-	position: fixed;
+	
 	bottom: 0vw;
 	right: 0vw;
 	width: 35vw;
@@ -19,9 +19,10 @@ export const BackgroundImageDrone = styled.div`
 	background-repeat: no-repeat;
 	z-index: -99;
 `
+//position: fixed;
 
 export const BackgroundImageMoney = styled.div`
-	position: fixed;
+	
 	bottom: 1vw;
 	right: 1vw;
 	width: 20vw;
@@ -38,7 +39,7 @@ const reactAnimation = keyframes`
 `
 
 export const BackgroundImageReact = styled.div`
-	position: fixed;
+	
 	bottom: 1vw;
 	right: 1vw;
 	width: 15vw;
@@ -51,7 +52,7 @@ export const BackgroundImageReact = styled.div`
 `
 
 export const BackgroundImagePills = styled.div`
-	position: fixed;
+	
 	bottom: 2vw;
 	right: 5vw;
 	width: 40vw;
@@ -63,7 +64,7 @@ export const BackgroundImagePills = styled.div`
 `
 
 export const BackgroundImageOliveOil = styled.div`
-	position: fixed;
+	
 	bottom: 2vw;
 	right: 5vw;
 	width: 30vw;
@@ -75,7 +76,7 @@ export const BackgroundImageOliveOil = styled.div`
 `
 
 export const BackgroundImageChemistry = styled.div`
-	position: fixed;
+	
 	bottom: 2vw;
 	right: 5vw;
 	width: 30vw;

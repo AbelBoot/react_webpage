@@ -57,13 +57,11 @@ export const Part1 = () => {
 
 		return (
 			<>
-			<Container>
-			<Relative>
 			<h3>Set up of the Project</h3>
 			<Index>
 				<h1>01</h1>
 			</Index>
-			<Flex justify={"space-around"}>
+			
 			<ReactPlayer 
 				url="VideoTest1.mkv"
 				controls
@@ -145,15 +143,11 @@ export const Part1 = () => {
 				onChange={(e) => changeVol(e)}	
 				/>
 			</div>
-
-		
-			
-			</Flex>
-			</Relative>
-			</Container>
 			</>
 			)	
 }
+
+//<Flex justify={"space-around"}>
 //{videoRef.current && 
 // onChange={(e) => {
 // 					changeVol(e)

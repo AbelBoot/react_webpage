@@ -24,35 +24,7 @@ export const AboutMe = () => {
 			{locale === "pt" && <h2><Span>{AboutMeText[3]}</Span></h2>}
 			<Form />
 			<h5>{AboutMeText1}</h5>
-			<Tabs>
-				<div label="deltamethrin">
-			{locale === "en" && <h5>{AboutMeText3[0]}</h5>}
-			{locale === "fr" && <h5>{AboutMeText3[1]}</h5>}		
-			{locale === "sp" && <h5>{AboutMeText3[2]}</h5>}	
-			{locale === "pt" && <h5>{AboutMeText3[3]}</h5>}
-			<A target="_blank" href="https://www.sciencedirect.com/science/article/abs/pii/S0021967315009760">Deltamethrin</A>
-			<A target="_blank" href="/papers/DeltamethrinDraft.pdf">pdf</A>
-			<BackgroundImageOliveOil />
-				</div>
-				<div label="Dibenzodiazepines">
-			{locale === "en" && <h5>{AboutMeText4[0]}</h5>}
-			{locale === "fr" && <h5>{AboutMeText4[1]}</h5>}		
-			{locale === "sp" && <h5>{AboutMeText4[2]}</h5>}	
-			{locale === "pt" && <h5>{AboutMeText4[3]}</h5>}
-			<A target="_blank" href="https://pubs.rsc.org/en/content/articlelanding/2015/ra/c5ra19599c/unauth#!divAbstract">Dibenzodiazepines</A>
-			<A target="_blank" href="/papers/Dibenzodiazepines.pdf">pdf</A>
-			<BackgroundImagePills />
-				</div>
-				<div label="BenzeneActivation">
-			{locale === "en" && <h5>{AboutMeText2[0]}</h5>}
-			{locale === "fr" && <h5>{AboutMeText2[1]}</h5>}		
-			{locale === "sp" && <h5>{AboutMeText2[2]}</h5>}	
-			{locale === "pt" && <h5>{AboutMeText2[3]}</h5>}
-			<A target="_blank" href="https://pubs.acs.org/doi/abs/10.1021/ja1061505">Benzene Activation</A>
-			<A target="_blank" href="/papers/BenzeneActivation.pdf">pdf</A>
-			<BackgroundImageChemistry />
-				</div>
-			</ Tabs>
+
 			{locale === "en" && <h5>{AboutMeText2[0]}</h5>}
 			{locale === "fr" && <h5>{AboutMeText2[1]}</h5>}		
 			{locale === "sp" && <h5>{AboutMeText2[2]}</h5>}	

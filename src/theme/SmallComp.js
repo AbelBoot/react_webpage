@@ -26,20 +26,34 @@ export const Span = styled.span`
   padding: 6px 10px 6px 10px;
 `
 
-export const OlTabs = styled.ol`  
+export const SpanTab = styled.span`
+  display: inline;
+  border-radius: 5px 20px 5px;
+  padding: 6px 10px 6px 10px;
+`
+
+export const TabContainer = styled.div`
   display: flex;
   
-  ${({justify}) => justify && css`
-    justify-content: ${justify};
+`
+//display:flex;
+
+export const OlTabs = styled.ol`  
+  display: flex;
+  ${(props) => props.maxWidth && css `
+    max-width: 30px;
+    ` }
+  ${({justifyContent}) => justifyContent && css`
+    justify-content: ${justifyContent};
   `};
-  ${({column}) => column && css`
-    flex-direction: ${column};
+  ${({flexDirection}) => flexDirection && css`
+    flex-direction: ${flexDirection};
   `};
   ${({alignItems}) => alignItems && css`
     align-items: ${alignItems};
   `};
   list-style: none;
-  margin-bottom: -1px;
+  margin: 1px;
   padding: 0.5rem 0.75rem;
 `
 
@@ -96,6 +110,7 @@ export const HeaderLink = styled(Link)`
   &:hover {
     color: black;
   }  
+  font-weight: bold;
 `
 
 export const HeaderDiv = styled.div`

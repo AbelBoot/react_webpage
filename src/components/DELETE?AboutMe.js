@@ -24,7 +24,7 @@ export default class AboutMe extends React.Component {
 			 	}
 			}
 			</LocaleContext.Consumer>
-			<h3>{AboutMeText1}</h3>
+			
 			</>
 			)
 	}

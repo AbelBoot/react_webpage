@@ -22,21 +22,21 @@ export const AboutMeText2 = [
 	"Para uma lista completa, você pode conferir o Google Scholars:"
 	]
 
-export const AboutMeText3 = [
+export const ProjectsChem1 = [
 	"Talk a bit about DeltaMethrin.",
 	"Dire quelque chose sur la Deltamethrin.",
 	"Habla un poco sobre DeltaMethrin.",
 	"Fale um pouco sobre DeltaMethri.n"
 	]
 
-export const AboutMeText4 = [
+export const ProjectsChem2 = [
 	"Talk a bit about Dibenzodiazepines.",
 	"Dire quelque chose sur la Dibenzodiazepines.",
 	"Habla un poco sobre Dibenzodiazepines.",
 	"Fale um pouco sobre Dibenzodiazepines."
 	]
 
-export const AboutMeText5 = [
+export const ProjectsChem3 = [
 	"Talk a bit about C-H activation.",
 	"Dire quelque chose sur la C-H activation.",
 	"Habla un poco sobre C-H activation.",

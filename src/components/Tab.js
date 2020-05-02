@@ -1,5 +1,6 @@
 import React from "react"
 import { ListTab } from "../theme/SmallComp"
+import { SpanTab } from "../theme/SmallComp"
 
 export class Tab extends React.Component {
 	
@@ -12,13 +13,13 @@ export class Tab extends React.Component {
 		const {label, activeTab} = this.props
 
 		return (
-			<ListTab 
-				alignItems={"flex-start"}
+			<SpanTab><ListTab 
+				
 				onClick={this.onClick}
 				selected={activeTab === label}
 			>
 				{label}
-			</ListTab>
+			</ListTab></SpanTab>
 			)
 	}
 }
