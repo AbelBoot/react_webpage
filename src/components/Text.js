@@ -9,18 +9,25 @@ export const AboutMeText = [
 	]
 
 export const AboutMeText1 = [
-	"Once a researcher, I published a number of papers in Computational Chemistry. If you don’t know what is computational chemistry, it’s basically making chemistry with computers only: What for? Mostly in a attempt to understand what is happening in chemical reactions at a molecular level. This, in turn, helps understanding their mechanisms of action. In our modern world, many chemical reactions are so useful so that are scaled up at an industrial level. We know their work, but we don’t really know how. Understanding the how, might help improving their process, i.e. reducing their cost, being financial or environmental. It can also help inventing brand new reactions. Computational chemistry can be used in a variety of fields: drug design, catalysis, engineering… My research was based mostly on homogeneous catalysis. If case you’re interested, below are some of my papers I co-authored in the years I was active in Chemistry. Check the link to the publisher, or get the pdf!",
-	"",
-	"",
-	""
+	"Only the essential: my background is in Chemistry, but I have been working in IT for the last few years. My current main hobby is learning JavaScript and what I want is to get a job that would allow me to do it full time. This small webpage is intended to be a sort of an extended CV, but if you want to download a good old-fashioned resume, here is the pdf: You can contact me through GitHub, by email, or by simply filling the little form on the right.",
+	"Voici le principal: Chimiste de formation, je travaille dans l’IT depuis 4-5 ans. Je passe le plus clair de mon temps libre a apprendre à coder en JavaScript, et mon objectif est de pouvoir trouver un travail qui me permette de le faire à temps plein. L’objectif de ce petit site internet est de présenter un CV un peu étendu, mais si vous souhaitez consulter un CV traditionnel, cliquez là-dessous pour avoir le pdf. Vous pouvez me contacter sur GitHub, par email, ou en remplissant le petit formulaire à côté.",
+	"Solo lo esencial: mi campo inicial es la Química, pero he estado trabajando en informatica estos últimos 3 o 4 años. Mi hobby principal actual es aprender JavaScript y lo que quiero es conseguir un trabajo que me permita hacerlo a tiempo completo. Esta pequeña página web está destinada a ser una especie de CV extendido, pero aquí está el pdf de un curriculum mas tradicional: Puede contactarme a través de GitHub, por correo electrónico o simplemente completando el pequeño formulario a la derecha.",
+	"Apenas o essencial: a minha formação é em Química, mas trabalho com suporte técnico informático nos últimos 3-4 anos. O meu principal hobby é aprender JavaScript e o que eu quero é conseguir um emprego que me permita fazê-lo em tempo integral. Esta página da Web pretende ser uma espécie de currículo extenso, mas também aqui está o pdf: Você pode entrar em contato comigo através do GitHub, por email ou simplesmente preenchendo o pequeno formulário à direita."
 	]
 
 export const AboutMeText2 = [
-	"For a full list, you can check Google Scholars: ",
-	"Pour une liste complète, consultez Google Scholars: ",
-	"Para una lista completa, puedes ir a Google Scholars",
-	"Para uma lista completa, você pode conferir o Google Scholars:"
-	]
+"",
+"",
+"",
+""
+]
+
+export const ProjectsChem0 = [
+"Once a researcher, I published a number of papers in Computational Chemistry. If you don’t know what is computational chemistry, it’s basically making chemistry with computers only: What for? Mostly in a attempt to understand what is happening in chemical reactions at a molecular level. This, in turn, helps understanding their mechanisms of action. In our modern world, many chemical reactions are so useful so that are scaled up at an industrial level. We know their work, but we don’t really know how. Understanding the how, might help improving their process, i.e. reducing their cost, being financial or environmental. It can also help inventing brand new reactions. Computational chemistry can be used in a variety of fields: drug design, catalysis, engineering… My research was based mostly on homogeneous catalysis. If case you’re interested, below are some of my papers I co-authored in the years I was active in Chemistry. Check the link to the publisher, or get the pdf!",
+"",
+"",
+"",
+]
 
 export const ProjectsChem1 = [
 	"Talk a bit about DeltaMethrin.",
@@ -41,6 +48,13 @@ export const ProjectsChem3 = [
 	"Dire quelque chose sur la C-H activation.",
 	"Habla un poco sobre C-H activation.",
 	"Fale um pouco sobre C-H activation."
+	]
+
+export const ProjectsChem4 = [
+	"For a full list, you can check Google Scholars: ",
+	"Pour une liste complète, consultez Google Scholars: ",
+	"Para una lista completa, puedes ir a Google Scholars",
+	"Para uma lista completa, você pode conferir o Google Scholars:"
 	]
 
 export const ProjectText = [
@@ -70,6 +84,8 @@ export const ProjectTextP1 = [
 "Esta es esta página propia: sí, una cartera, cuando thin también puede consistir en el manejador de cartera. Completamente hecho en React, ¡espero que les guste el diseño simplista!",
 "Esta é esta página própria: Sim, um portfólio, quando fino também pode consistir no manipulador de portfólio! Feito totalmente em React, espero que você goste do design simplista!"
 ]
+
+
 
 export const LandingText = [
 "Welcome to my portfolio",

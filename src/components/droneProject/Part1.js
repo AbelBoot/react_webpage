@@ -41,6 +41,7 @@ export const Part1 = () => {
 		//console.log("video currentTime", videoRef.current.currentTime)
 		const percent = ((videoRef.current.currentTime / videoRef.current.duration)) * 100
 		//console.log("percent", percent)
+
 		setprogressVal(percent)
 	}
 	}
@@ -52,8 +53,20 @@ export const Part1 = () => {
 	useEffect(() => {
 		videoRef.current.addEventListener("timeupdate", () => {
 		handleProgress()
-	})
+	}) 
+		return () => videoRef.current.removeEventListener("timeupdate", () => {
+			handleProgress()
+		})
 	}, [debouncedProgressVal])
+	// useEffect(() => {
+	// 	progressRef.current.addEventListener("click", () => {
+	// 	console.log("time on click", videoRef.current.currentTime)
+	// 	const currentTimeOnClick = videoRef.current.currentTime
+	// 	setprogressVal(currentTimeOnClick)
+	// 	videoRef.current.removeEventListener("timeupdate", () => {})
+	// 	console.log("progressVal", progressVal)
+	// })
+	// }, )
 
 		return (
 			<>

@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { LocaleContext } from "./context/LocaleContext"
 import styled from "styled-components"
 import { ProjectText, ProjectTextD1, ProjectTextB1, ProjectTextP1 } from "./components/Text"
-import { ProjectsChem1, ProjectsChem2, ProjectsChem3 } from "./components/Text"
+import { ProjectsChem0, ProjectsChem1, ProjectsChem2, ProjectsChem3, ProjectsChem4 } from "./components/Text"
 import { Header } from "./components/Header"
 import Tabs from "./components/Tabs"
 import { violet } from "./theme/variables"
@@ -10,10 +10,11 @@ import { A, Span } from "./theme/SmallComp"
 import { Icon } from "./components/Icons"
 import { Part1 } from "./components/droneProject/Part1"
 import { Container, ProjectContainer, ProjectChemistryContainer } from "./theme/Containers"
+import { ProjectChemDiv1, ProjectChemDiv2, ProjectChemDiv3 } from "./theme/ProjectChemStyle"
 import { BackgroundImageDrone, BackgroundImageMoney, BackgroundImageReact } from "./theme/GlobalStyle"
 import { BackgroundImageChemistry, BackgroundImageOliveOil, BackgroundImagePills } from "./theme/GlobalStyle"
 
-
+//for chemistry tab <Tabs alignItems="center">
 
 export const Projects = () => {
 	const { locale, updateLocale } = useContext(LocaleContext)
@@ -61,7 +62,23 @@ export const Projects = () => {
       			
       			<div label="Chemistry">
       			<ProjectChemistryContainer>
+      		<ProjectChemDiv1>
+      		{locale === "en" && <h5>{ProjectsChem0[0]}</h5>}
+			{locale === "fr" && <h5>{ProjectsChem0[1]}</h5>}		
+			{locale === "sp" && <h5>{ProjectsChem0[2]}</h5>}	
+			{locale === "pt" && <h5>{ProjectsChem0[3]}</h5>}	
+			</ProjectChemDiv1>
+			<ProjectChemDiv2>
+      		{locale === "en" && <h5>{ProjectsChem4[0]}</h5>}
+			{locale === "fr" && <h5>{ProjectsChem4[1]}</h5>}		
+			{locale === "sp" && <h5>{ProjectsChem4[2]}</h5>}	
+			{locale === "pt" && <h5>{ProjectsChem4[3]}</h5>}	
+			</ProjectChemDiv2>
+			<ProjectChemDiv3>
+			<A target="_blank" href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=abel+locati&btnG=" ><Icon name="googleScholars" color="blue"/></A>
+			</ProjectChemDiv3>
 				<Tabs alignItems="center">
+
 				<div label="deltamethrin">
 			{locale === "en" && <h5>{ProjectsChem1[0]}</h5>}
 			{locale === "fr" && <h5>{ProjectsChem1[1]}</h5>}		
@@ -92,7 +109,6 @@ export const Projects = () => {
 			</ Tabs>
 			</ProjectChemistryContainer>
       			</div>
-
     		</Tabs>
     		</ProjectContainer>
     		

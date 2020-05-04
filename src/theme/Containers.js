@@ -1,5 +1,6 @@
 import styled  from "styled-components"
 import { css }  from "styled-components"
+import { violet, pink } from "./variables"
 
 export const Container = styled.div`
   padding-left: 30px;
@@ -19,10 +20,23 @@ export const ProjectContainer = styled.div`
 
 export const ProjectChemistryContainer = styled.div`
   width: 350px;
-  background-color: blue;
+`
+
+
+export const AboutMeContainer = styled.div`
+  display: flex;
+  flex-wrap:wrap;
   
 `
 
+export const FormContainer = styled.form`
+  display: flex;
+  border: 1px solid ${violet};
+  border-radius: 25px;
+  padding: 1.5em;
+`
+
+//background-color: blue;
 
 export const Relative = styled.div`
   position: relative;

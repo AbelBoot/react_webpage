@@ -16,7 +16,7 @@ function Landing() {
     {locale === "fr" && <h2><Span>{LandingText[1]}</Span></h2>}
     {locale === "sp" && <h2><Span>{LandingText[2]}</Span></h2>}
     {locale === "pt" && <h2><Span>{LandingText[3]}</Span></h2>}
-    <Button>Button</Button>
+    
     {locale === "en" && <h4>{LandingText1[0]}</h4>}
     {locale === "fr" && <h4>{LandingText1[1]}</h4>}
     {locale === "sp" && <h4>{LandingText1[2]}</h4>}

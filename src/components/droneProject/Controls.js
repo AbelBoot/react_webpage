@@ -7,7 +7,7 @@ export const Controls = (props, {videoRef}) => {
 	const [isPaused, setVal] = useState(true)
 	return (
 		<>
-		{console.log("props", props)}
+		
 				<div onClick={() => {
 					videoRef.current.paused 
 					? videoRef.current.play()

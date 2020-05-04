@@ -119,7 +119,8 @@ export const HeaderDiv = styled.div`
 `
 
  export const A = styled.a`
-  color: black;
+  color: ${violet};
+  font-weight: bold;
   text-decoration: none;
   position: relative;
   padding: 6px 10px 6px 10px;
@@ -141,7 +142,54 @@ export const HeaderDiv = styled.div`
     background-color: ${pink};
   }
  `
+export const BigDivForm = styled.div`
+  width: 800px;
+  margin 5% auto;
+`
 
+export const DivForm = styled.div`
+  flex: 1;
+  order: 1;
+  margin-right: 2em;
+  & Input {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border-radius: 40px
+  }
+  & InputForm {
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: red;
+  }
+
+`
+export const DivFormMess = styled.div`
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  & Input {
+    flex: 1;
+    min-width: 18em;
+    background: transparent; 
+    padding: 15px;
+  }
+
+`
+//stopped at 6.30
+export const InputForm = styled.input`
+  
+`
+
+export const LabelForm = styled.label`
+  
+  border: 2px solid palevioletred;
+  font-weight: bold;
+`
+
+export const PForm = styled.p`
+  color: red
+`
  export const Index = styled.div`
   position: absolute;
   left: 0;

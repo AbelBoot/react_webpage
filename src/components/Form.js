@@ -1,50 +1,60 @@
-import React, { useReducer } from "react"
+import React, { useState } from "react"
+import {useValidation} from "./FormValidation"
+import validateFunction from "./FormValidation"
+import { BigDivForm, DivForm, DivFormMess, InputForm, LabelForm, ButtonForm, PForm } from "../theme/FormStyle"
+import { FormContainer } from "../theme/Containers"
 
 const initialVal = {
 		name: "", email: "", message:""
 	}
 		
-function reducer(state, {field, value}){
-		console.log("state", state)
-		return {
-			...state, 
-			[field]: value
-		}
-	}
 
-export function Form(props){
-	const [state, dispatch] = useReducer(reducer, initialVal)
-	const {name, email, message } = state
-	const onChange = (e) => {
-		dispatch({field: e.target.name, value: e.target.value})
-	}
+export function FormComp(props){
+	const { values, handleChange, handleSubmit, handleBlur, errors, isSubmitting  } 
+		= useValidation(initialVal, validateFunction)
+	//const [name, setName] = useState("")
+	//const [email, setEmail] = useState("")
+	//const [message, setMessage] = useState("")
+
 
 	return (
 		<>
-		<form onSubmit={onChange}>
-		<label>Name: </label>
-		<input 
+		<BigDivForm>
+		<FormContainer onSubmit={handleSubmit}>
+		<DivForm>
+		<LabelForm>Name: </LabelForm>
+		<InputForm 
 			name="name"
-			value={name}
+			value={values.name}
 			placeholder="Votre nom"
-			onChange={onChange}
+			onChange={handleChange}
+			onBlur={handleBlur}
+			className={errors.name && "error-input"}
 		/>
-		<label>Email: </label>
-		<input 
+
+		<LabelForm>Email: </LabelForm>
+		<InputForm 
 			name="email"
-			value={email}
+			value={values.email}
 			placeholder="Votre mail"
-			onChange={onChange}
+			onChange={handleChange}
 		/>
-		<label>Message: </label>
-		<input 
+		
+		{errors.email && <PForm>{errors.email}</PForm>}
+		
+		<ButtonForm type="submit" value="Submit">Submit</ButtonForm>
+		</DivForm>
+		<DivFormMess>
+		<LabelForm>Message: </LabelForm>
+		<InputForm 
 			name="message"
-			value={message}
+			value={values.message}
 			placeholder="Votre message"
-			onChange={onChange}
+			onChange={handleChange}
 		/>
-		<input type="submit" value="Submit"></input>
-		</form>	
+		</DivFormMess>
+		</FormContainer>
+		</BigDivForm>	
 		</>
 		)
 }
