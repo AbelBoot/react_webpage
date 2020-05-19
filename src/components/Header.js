@@ -11,7 +11,7 @@ export const Header = () => {
 			<BigDiv>
 			<HeaderLink to="/" style={{textDecoration: "none", marginTop: "4px"}}><Div> Home </Div></HeaderLink>
 			<HeaderLink to="/projects" style={{textDecoration: "none", marginTop: "4px"}}><Div> Projects </Div></HeaderLink>
-			<HeaderLink to="/about" style={{textDecoration: "none", marginTop: "4px"}}><Div> About Me </Div></HeaderLink>
+			
 			<Div onClick={updateLocale.bind(null, "fr")}>🇫🇷</Div>
 			<Div onClick={updateLocale.bind(null, "en")}>🇬🇧</Div>
 			<Div onClick={updateLocale.bind(null, "sp")}>🇪🇸</Div>
@@ -25,3 +25,4 @@ export const Header = () => {
 //<button onClick={localeVal.updateLocale}>Change language</button>	
 // onClick={value.updateLocale.bind("french")}
 //data-lang={"fr"}
+// <HeaderLink to="/about" style={{textDecoration: "none", marginTop: "4px"}}><Div> About Me </Div></HeaderLink>

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { LocaleContext } from "./context/LocaleContext"
 import "./Landing.css"
-import { Button, BigDiv, Div, A, Span } from "./theme/SmallComp"
+import { AboutMe } from "./AboutMe"
+import { Button, BigDiv, Div, A, Span, SpanCV } from "./theme/SmallComp"
 import { violet } from "./theme/variables"
 import { Header } from "./components/Header"
 import Tabs from "./components/Tabs"
@@ -21,6 +22,7 @@ function Landing() {
     {locale === "fr" && <h4>{LandingText1[1]}</h4>}
     {locale === "sp" && <h4>{LandingText1[2]}</h4>}
     {locale === "pt" && <h4>{LandingText1[3]}</h4>}
+    <AboutMe />
     <BigDiv justify={"center"}>
     <Div>
     <A target="_blank" href="https://www.linkedin.com/in/abel-locati-3912056b">
@@ -41,6 +43,17 @@ function Landing() {
     <A target="_blank" href="https://github.com/AbelBoot">
         <Icon name="github" />
     </A>
+    </Div>
+    <Div>
+                {locale === "en" && 
+            <A target="_blank" href="/documents/Resume.pdf"><Icon name="resume" /><SpanCV>CV</SpanCV></A>}
+            {locale === "fr" &&
+            <A target="_blank" href="/documents/Resume.pdf"><Icon name="resume" /><SpanCV>Resume</SpanCV></A>}      
+            {locale === "sp" && 
+            <A target="_blank" href="/documents/Resume.pdf"><Icon name="resume" /><SpanCV>Curriculum</SpanCV></A>}   
+            {locale === "pt" && 
+            <A target="_blank" href="/documents/Resume.pdf"><Icon name="resume" /><SpanCV>Curriculum</SpanCV></A>}
+
     </Div>
     </BigDiv>
 

@@ -18,6 +18,24 @@ export const ProjectContainer = styled.div`
   width: 100%;
 `
 
+export const ProjectDronesContainer = styled.div`
+  
+    
+`
+
+export const ProjectAuctionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+`
+
+export const ProjectPortfolioContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  
+
+`
+
 export const ProjectChemistryContainer = styled.div`
   width: 350px;
 `
@@ -32,8 +50,8 @@ export const AboutMeContainer = styled.div`
 export const FormContainer = styled.form`
   display: flex;
   border: 1px solid ${violet};
-  border-radius: 25px;
-  padding: 1.5em;
+  border-radius: 15px;
+  padding: 1em;
 `
 
 //background-color: blue;

@@ -20,10 +20,7 @@ export const AboutMe = () => {
 		const { locale } = useContext(LocaleContext)
 		return (
 			<>  
-			{locale === "en" && <h2><Span>{AboutMeText[0]}</Span></h2>}
-			{locale === "fr" && <h2><Span>{AboutMeText[1]}</Span></h2>}		
-			{locale === "sp" && <h2><Span>{AboutMeText[2]}</Span></h2>}	
-			{locale === "pt" && <h2><Span>{AboutMeText[3]}</Span></h2>}
+
 			<AboutMeContainer>
 			<AboutMeDiv1>
 			{locale === "en" && <h5>{AboutMeText1[0]}</h5>}
@@ -41,14 +38,7 @@ export const AboutMe = () => {
 			{locale === "pt" && <h5>{AboutMeText2[3]}</h5>}
 			</AboutMeDiv3>
 			<Div>
-			{locale === "en" && 
-			<A target="_blank" href="/documents/Resume.pdf"><h5>Traditional CV</h5></A>}
-			{locale === "fr" &&
-			<A target="_blank" href="/documents/Resume.pdf"><h5>CV Traditionnel.</h5></A>}		
-			{locale === "sp" && 
-			<A target="_blank" href="/documents/Resume.pdf"><h5>Curriculum.</h5></A>}	
-			{locale === "pt" && 
-			<A target="_blank" href="/documents/Resume.pdf"><h5>Curriculum.</h5></A>}
+
 			</Div>
 			</AboutMeContainer>
 			</>   
@@ -60,3 +50,7 @@ export const AboutMe = () => {
 			// {localeVal => {
 			// 				}
 			// </LocaleContext.Consumer>
+						// {locale === "en" && <h2><Span>{AboutMeText[0]}</Span></h2>}
+			// {locale === "fr" && <h2><Span>{AboutMeText[1]}</Span></h2>}		
+			// {locale === "sp" && <h2><Span>{AboutMeText[2]}</Span></h2>}	
+			// {locale === "pt" && <h2><Span>{AboutMeText[3]}</Span></h2>}

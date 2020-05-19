@@ -1,7 +1,7 @@
 import styled  from "styled-components"
-import { css }  from "styled-components"
+import { css, keyframes }  from "styled-components"
 import { Link } from "react-router-dom"
-import { pink, grey, violet } from "./variables"
+import { pink, grey, violet, yellow } from "./variables"
 
 
 export const BigDiv = styled.div`
@@ -25,6 +25,28 @@ export const Span = styled.span`
   border-radius: 5px 20px 5px;
   padding: 6px 10px 6px 10px;
 `
+
+const reactSpanAnimation = keyframes`
+  0%{ opacity: 0;}
+  50%{ opacity: .5;}
+  100%{ opacity: 1;}
+`
+
+export const SpanCV = styled.span`
+  display: inline;
+  margin-left: .2em;
+  color: white;
+  background-color: ${violet};
+  border-radius: 5px 20px 5px;
+  padding: 6px 10px 6px 10px;
+  
+`
+const reactAnimation = keyframes`
+  0%{ opacity: 0;}
+  50%{ opacity: .5;}
+  100%{ opacity: 1;}
+`
+
 
 export const SpanTab = styled.span`
   display: inline;
@@ -118,6 +140,11 @@ export const HeaderDiv = styled.div`
 
 `
 
+export const DivArrow = styled.div`
+  margin-top:4em;
+  margin-right: 2.7em;
+`
+
  export const A = styled.a`
   color: ${violet};
   font-weight: bold;
@@ -141,7 +168,13 @@ export const HeaderDiv = styled.div`
     border-radius: 1px;
     background-color: ${pink};
   }
+
+  &:after DivArrow {
+    margin-bottom: 3em;
+  }
  `
+
+
 export const BigDivForm = styled.div`
   width: 800px;
   margin 5% auto;

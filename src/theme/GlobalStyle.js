@@ -27,7 +27,7 @@ export const BackgroundImageMoney = styled.div`
 	right: 1vw;
 	width: 20vw;
 	height: 15vh;
-	background-image: url("./money2.png");
+	background-image: url("./money3.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: -99;
@@ -39,18 +39,16 @@ const reactAnimation = keyframes`
 `
 
 export const BackgroundImageReact = styled.div`
-	
-	bottom: 1vw;
-	right: 1vw;
 	width: 15vw;
 	height: 15vh;
+	
+	border: transparent;
 	background-image: url("./reactGifLogo.svg");
-	background-size: cover;
 	background-repeat: no-repeat;
 	animation: ${reactAnimation} infinite 20s linear;
-	z-index: -99;
 `
-
+//	bottom: 1vw; right: 1vw; background-size: cover;
+//z-index: -99;
 export const BackgroundImagePills = styled.div`
 	
 	bottom: 2vw;

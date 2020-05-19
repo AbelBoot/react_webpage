@@ -21,15 +21,29 @@ export const ProgressBar = (props) => {
 	// 	
 	// }, )
 	const trackRef = useRef()
+
+	const recalcPerc = (min, value, max) => {
+		return Math.min(Math.max(min, value), max)
+	}
+
 	const changeTime = (e) => {
 		props.handleProgress(e.nativeEvent.offsetX)
+		// console.log("e.nativeEvent.offsetX", e.nativeEvent.offsetX)
+		// console.log("offsetX width", trackRef.current.offsetWidth)
+		// console.log("props.refProg.current.duration", props.refProg.current.duration)
+		//const percent = ((e.nativeEvent.offsetX * props.refProg.current.duration)) / 100
+		//console.log("percent", percent)
+		
+		//props.handleProgress(percent)
 	}
+	//const scrubTime = (e.offsetX / progress.offsetWidth)
+	// * video.duration;
 	return (
 		<Track
 			ref={trackRef} 
 			onClick={(e) => changeTime(e)}>
 			<Thumb 
-				percentage={props.percentage}
+				percentage={props.percentage}//recalcPerc(0, props.percentage, 100)}
 				
 				/>
 		</Track>

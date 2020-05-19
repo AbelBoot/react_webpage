@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useContext, useEffect } from "react"
+import { LocaleContext } from "../context/LocaleContext"
 import {useValidation} from "./FormValidation"
 import validateFunction from "./FormValidation"
 import { BigDivForm, DivForm, DivFormMess, InputForm, LabelForm, ButtonForm, PForm } from "../theme/FormStyle"
@@ -9,24 +10,35 @@ const initialVal = {
 	}
 		
 
+
 export function FormComp(props){
+	const { locale } = useContext(LocaleContext)
 	const { values, handleChange, handleSubmit, handleBlur, errors, isSubmitting  } 
 		= useValidation(initialVal, validateFunction)
-	//const [name, setName] = useState("")
-	//const [email, setEmail] = useState("")
-	//const [message, setMessage] = useState("")
-
+	// try with an object as initial value
+	const [placeHolderValue, setPlaceHolder] = useState()
+	useEffect(() => {
+		if (locale === "en"){setPlaceHolder("Your Name:")}		
+		if (locale === "fr"){setPlaceHolder("Votre Nom:")}		
+		if (locale === "sp"){setPlaceHolder("Su Nombre:")}		
+		if (locale === "pt"){setPlaceHolder("O Seu Nome:")}		
+	}, [locale])
 
 	return (
 		<>
 		<BigDivForm>
 		<FormContainer onSubmit={handleSubmit}>
 		<DivForm>
-		<LabelForm>Name: </LabelForm>
+		<LabelForm>
+			{locale === "en" && `Name: `}
+			{locale === "fr" && `Nom: `}		
+			{locale === "sp" && `Nombre: `}	
+			{locale === "pt" && `Nome: `}
+		</LabelForm>
 		<InputForm 
 			name="name"
 			value={values.name}
-			placeholder="Votre nom"
+			placeholder={placeHolderValue}
 			onChange={handleChange}
 			onBlur={handleBlur}
 			className={errors.name && "error-input"}

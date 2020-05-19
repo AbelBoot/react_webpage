@@ -19,9 +19,8 @@ export const DivForm = styled.div`
     padding-bottom: 0.5em;
     margin-bottom: 1em; 
   }
-  & Label {
+  & label {
     font-weight: bold;
-    margin-bottom: 1em;
   }
 
 `
@@ -37,7 +36,7 @@ export const DivFormMess = styled.div`
   order: 2;
   & input {
     flex: 1;
-    min-width: 18em;
+    
     border-radius: 0.5em;
   }
   & label {
@@ -46,17 +45,21 @@ export const DivFormMess = styled.div`
   }
   
 `
+//min-width: 18em;
 
 export const InputForm = styled.input` 
 
 `
 
 export const LabelForm = styled.label`
+margin-bottom: .2em;
   
 `
 
 export const ButtonForm = styled.button`
     margin-bottom: 1em;  
+    margin-top: 2em;  
+    margin-left: 2em;  
     
     font-weight: bold;
     font-size: 1em;

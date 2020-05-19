@@ -29,11 +29,21 @@ export const Part1 = () => {
 	const [progressVal, setprogressVal] = useState(0)
 	const [playByClick, setplayByClick] = useState(progressVal)
 	const debouncedProgressVal = useDebounce(progressVal, 1000)
-	const handleProgress = (playByClick) => {	
+	const handleProgress = (playByClick, e) => {	
 		console.log("click", playByClick)
+		console.log("video curr", videoRef.current.currentTime)
+		//videoRef.current.currentTime(playByClick)
 		if (playByClick){
 			setplayByClick(playByClick)
-			setprogressVal(playByClick)
+			const percentClick = ((playByClick / videoRef.current.duration)) * 100
+			// console.log("playByClick", playByClick)
+			// console.log("e", e)
+			// console.log("videoRef.current.duration", videoRef.current.duration)
+			// console.log("divide",videoRef.current.duration/playByClick)
+			// console.log("percentClick", percentClick)
+			setprogressVal(percentClick)
+			videoRef.current.currentTime = playByClick
+
 		} else {
 		//setprogressVal(progressVal + 10)
 		//console.log("progressVal", progressVal)
@@ -103,7 +113,7 @@ export const Part1 = () => {
 				//onClick={(e) => handleProgress(e)}
 			>
 			<ProgressBar 
-				//check below if necessary
+				refProg={videoRef}
 				percentage={playByClick ? playByClick : progressVal}
 				handleProgress={handleProgress}
 			/>	
